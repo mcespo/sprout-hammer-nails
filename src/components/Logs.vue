@@ -2,7 +2,7 @@
   <section class="logs">
     <article>
       <h2>The number logs</h2>
-      <p>Customers who purchased the wood products of Hammer & Nails saw a marked increase in
+      <p>Customers who purchased the wood products of Hammer &amp; Nails saw a marked increase in
 lifestyle satisfaction.</p>
     </article>
     <aside>
@@ -29,8 +29,10 @@ export default {
 </script>
 
 <style scoped lang="scss">
-.footer {
-  background-color: #ddd;
-  display: flex;
+.logs {
+  background: transparent url("../assets/section2.jpg") 50% 50% / cover no-repeat;
+  @media only screen and (min-width: 960px) {
+    background-image: url("../assets/section2@2x.jpg");
+  }
 }
 </style>

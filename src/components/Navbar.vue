@@ -23,54 +23,57 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
-  nav {
-    width: 100vw;
-    height: 72px;
-    background-color: #fff;
+@import "../scss/_global";
 
-    ul {
-      list-style: none;
-      display: none;
-      @media only screen and (min-width : 960px) {
-        display: flex;
-      }
-      li:not(:last-child) {
-        margin-right: 1em;
-      }
-    }
+nav {
+  width: 100vw;
+  height: 72px;
+  background-color: $white;
 
-    a {
-      text-decoration: none;
-      font-weight: 700;
-    }
-
-    .container {
-      padding: 0 10vw;
-      height: 100%;
-      margin: 0 auto;
+  ul {
+    list-style: none;
+    display: none;
+    @media only screen and (min-width: 960px) {
       display: flex;
-      justify-content: space-between;
-      align-items: center;
-      @media only screen and (min-width : 960px) {
-        max-width: 1440px;
-      }
+    }
 
-      .nav_logo {
-        width: 220px;
-        margin-top: -6px;
-      }
+    li:not(:last-child) {
+      margin-right: 1em;
+    }
+  }
 
-      .nav_info {
-        a {
-          // color: $gray-dark;
-        }
-      }
+  a {
+    text-decoration: none;
+    font-weight: 700;
+  }
 
-      .nav_login {
-        &:first-child {
-          // color: $gray;
-        }
+  .container {
+    padding: 0 10vw;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @media only screen and (min-width: 960px) {
+      max-width: 1440px;
+    }
+
+    .nav_logo {
+      width: 220px;
+      margin-top: -6px;
+    }
+
+    .nav_info {
+      a {
+        color: $gray-dark;
+      }
+    }
+
+    .nav_login {
+      li:first-child a {
+        color: $gray;
       }
     }
   }
+}
 </style>

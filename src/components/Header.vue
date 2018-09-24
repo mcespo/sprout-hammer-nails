@@ -26,10 +26,18 @@ export default {
   @media only screen and (min-width: 960px) {
     background-image: url("../assets/hero@2x.jpg");
   }
+  & > *:not(:last-child) {
+    width: 90vw;
+    max-width: 1200px;
+  }
   h1 {
     font-weight: 800;
     font-size: 5em;
     line-height: 1;
+    font-size: between(20px, 43px, 100px, 959px);
+    @media only screen and (min-width: 960px) {
+      font-size: between(44px, 60px, 960px, 1400px);
+    }
   }
   p {
     padding: 2em 0 3em;

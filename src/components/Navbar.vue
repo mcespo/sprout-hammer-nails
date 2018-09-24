@@ -48,12 +48,13 @@ nav {
   }
 
   .container {
-    padding: 0 10vw;
+    padding: 0 5vw;
     height: 100%;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    width: 90vw;
     @media only screen and (min-width: 960px) {
       max-width: 1440px;
     }

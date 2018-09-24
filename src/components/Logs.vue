@@ -1,6 +1,6 @@
 <template>
   <section class="logs">
-    <article>
+    <article class="article-container">
       <h2>The number logs</h2>
       <p>Customers who purchased the wood products of Hammer &amp; Nails saw a marked increase in
 lifestyle satisfaction.</p>
@@ -32,9 +32,27 @@ export default {
 @import "../scss/_global";
 
 .logs {
+  padding: 80px 0;
+  text-align: center;
   background: transparent url("../assets/section2.jpg") 50% 50% / cover no-repeat;
   @media only screen and (min-width: 960px) {
     background-image: url("../assets/section2@2x.jpg");
+  }
+  .article-container {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    & > *:not(:last-child) {
+      width: 90vw;
+      max-width: 1200px;
+    }
+  }
+  .aside-container {
+    display: grid;
+    grid-template-columns: repeat(3, 30ch);
+    grid-gap: 40px;
+    justify-content: center;
+    padding-top: 60px;
   }
 }
 </style>

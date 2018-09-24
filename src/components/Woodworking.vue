@@ -13,22 +13,19 @@
       <aside>
         <h3>Bespoke</h3>
         <h4>The styles represented in this line are quite simply here to stay</h4>
-        <p>They must be deconstructed meticulously, piece by piece, to preserve the resource until it
-reaches our mills.</p>
+        <p>They must be deconstructed meticulously, piece by piece, to preserve the resource until it reaches our mills.</p>
         <a href="#">Learn More</a>
       </aside>
       <aside>
-        <h3>Handcrafted]</h3>
+        <h3>Handcrafted</h3>
         <h4>Perhaps the best term to describe these woods is timeless</h4>
-        <p>Oak reacts beautifully to our custom staining process, yielding colors that simply are not possible
-to attain on American Oak.</p>
+        <p>Oak reacts beautifully to our custom staining process, yielding colors that simply are not possible to attain on American Oak.</p>
         <a href="#">Learn More</a>
       </aside>
       <aside>
         <h3>Artisinal</h3>
         <h4>These ancient and abandoned American timbers find a new life</h4>
-        <p>Our aim with this line is to raise the bar on the standard American hardwood offering by utilizing
-extremely selective grading.</p>
+        <p>Our aim with this line is to raise the bar on the standard American hardwood offering by utilizing extremely selective grading.</p>
         <a href="#">Learn More</a>
       </aside>
     </div>
@@ -45,21 +42,36 @@ export default {
 @import "../scss/_global";
 
 .woodworking {
-  background-color: $gray-darker;
+  background: transparent url("../assets/section1.jpg") 50% 50% / cover no-repeat;
+  @media only screen and (min-width: 960px) {
+    background-image: url("../assets/section1@2x.jpg");
+  }
+
   .article-container {
+    width: 90vw;
+    max-width: 1200px;
+    margin: 0 auto;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 55ch auto;
+    grid-gap: 80px;
     justify-content: space-around;
-    padding: 5em 0;
-    background: transparent url("../assets/section1.jpg") 50% 50% / cover no-repeat;
-    @media only screen and (min-width: 960px) {
-      background-image: url("../assets/section1@2x.jpg");
+    align-items: center;
+    padding: 80px 0;
+    h2 {
+      font-size: 43px;
+      line-height: 2.5;
+    }
+    p {
+      font-size: 21px;
     }
   }
   .aside-container {
+    background-color: $gray-darker;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    justify-content: space-around;
+    grid-template-columns: repeat(3, 34ch);
+    grid-gap: 40px;
+    justify-content: center;
+    padding: 80px 0;
   }
 }
 </style>

@@ -42,8 +42,10 @@ export default {
 </script>
 
 <style scoped lang="scss">
+@import "../scss/_global";
+
 .woodworking {
-  background-color: hsl(180, 18%, 11%);
+  background-color: $gray-darker;
   .article-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -58,7 +60,6 @@ export default {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     justify-content: space-around;
-    // grid-gap: 100px;
   }
 }
 </style>

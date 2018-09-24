@@ -30,8 +30,9 @@ export default {
 </script>
 
 <style scoped lang="scss">
-.footer {
-  background-color: #ddd;
-  display: flex;
+@import "../scss/_global";
+
+.forests {
+  background-color: $black;
 }
 </style>

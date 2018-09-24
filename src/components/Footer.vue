@@ -41,8 +41,10 @@ export default {
 </script>
 
 <style scoped lang="scss">
+@import "../scss/_global";
+
 .footer {
-  background-color: #333;
+  background-color: $black;
   display: flex;
   color: #fff;
 }

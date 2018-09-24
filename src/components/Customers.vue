@@ -23,8 +23,9 @@ export default {
 </script>
 
 <style scoped lang="scss">
-.footer {
-  background-color: #ddd;
-  display: flex;
+@import "../scss/_global";
+
+.customers {
+  background-color: $gray-darker;
 }
 </style>

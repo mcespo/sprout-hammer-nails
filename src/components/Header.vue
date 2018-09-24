@@ -14,6 +14,8 @@ export default {
 </script>
 
 <style scoped lang="scss">
+@import "../scss/_global";
+
 .header {
   padding: 12em 0;
   display: grid;

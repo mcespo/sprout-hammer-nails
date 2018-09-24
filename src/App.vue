@@ -1,20 +1,35 @@
 <template>
   <div id="app">
-    <Navbar />
     <!-- <img alt="Vue logo" src="./assets/logo.png"> -->
-    <HelloWorld msg="Bespoke Wood Products"/>
+    <Navbar />
+    <Header />
+    <Woodworking />
+    <Logs />
+    <Forests />
+    <Customers />
+    <Footer />
   </div>
 </template>
 
 <script>
 import Navbar from "./components/Navbar.vue";
-import HelloWorld from "./components/HelloWorld.vue";
+import Header from "./components/Header.vue";
+import Woodworking from "./components/Woodworking.vue";
+import Logs from "./components/Logs.vue";
+import Forests from "./components/Forests.vue";
+import Customers from "./components/Customers.vue";
+import Footer from "./components/Footer.vue";
 
 export default {
   name: "app",
   components: {
     Navbar,
-    HelloWorld
+    Header,
+    Woodworking,
+    Logs,
+    Forests,
+    Customers,
+    Footer
   }
 };
 </script>
@@ -49,10 +64,24 @@ export default {
   padding: 0;
 }
 
+// colors
+$white: hsl(0, 0%, 100%);
+$gray: hsl(189, 5%, 70%);
+$gray-dark: hsl(180, 9%, 24%);
+$black: hsl(180, 13%, 8%);
+$pomegranate: hsl(14, 83%, 51%);
+
 #app {
   font-family: "proxima-nova", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: #2c3e50;
+}
+
+.cta {
+  text-decoration: none;
+  padding: 15px 20px;
+  font-weight: 700;
+  color: $white;
+  background-color: $pomegranate;
 }
 </style>

@@ -9,7 +9,7 @@
       </ul>
       <ul class="nav_login">
         <li><a href="#">Login</a></li>
-        <li><a class="signup" href="#">Start Your Free Trial</a></li>
+        <li><a class="cta" href="#">Start Your Free Trial</a></li>
       </ul>
     </div>
   </nav>
@@ -30,8 +30,10 @@ export default {
 
     ul {
       list-style: none;
-      display: flex;
-
+      display: none;
+      @media only screen and (min-width : 960px) {
+        display: flex;
+      }
       li:not(:last-child) {
         margin-right: 1em;
       }
@@ -43,26 +45,30 @@ export default {
     }
 
     .container {
-      max-width: 1440px;
+      padding: 0 10vw;
       height: 100%;
       margin: 0 auto;
       display: flex;
       justify-content: space-between;
       align-items: center;
+      @media only screen and (min-width : 960px) {
+        max-width: 1440px;
+      }
 
       .nav_logo {
-        width: 200px;
+        width: 220px;
+        margin-top: -6px;
       }
 
       .nav_info {
         a {
-          color: hsl(180, 9%, 24%);
+          // color: $gray-dark;
         }
       }
 
       .nav_login {
-        a {
-          color: hsl(189, 4%, 72%);
+        &:first-child {
+          // color: $gray;
         }
       }
     }

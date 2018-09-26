@@ -9,7 +9,7 @@
       </article>
       <picture>
         <source media="(min-width: 960px)" srcset="../assets/craftsman@2x.jpg">
-        <img src="../assets/craftsman.jpg" alt="Flowers" style="width:auto;">
+        <img src="../assets/craftsman.jpg" alt="image of Nate Turner">
       </picture>
     </div>
     <div class="aside-bg">

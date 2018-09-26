@@ -23,11 +23,11 @@
       </aside>
       <picture v-if="showTimber">
         <source media="(min-width: 960px)" srcset="../assets/tab1@2x.jpg">
-        <img src="../assets/tab1.jpg" alt="Flowers">
+        <img src="../assets/tab1.jpg" alt="Image of timber forest">
       </picture>
       <picture v-else-if="showFirewood">
         <source media="(min-width: 960px)" srcset="../assets/tab2@2x.jpg">
-        <img src="../assets/tab2.jpg" alt="Flowers">
+        <img src="../assets/tab2.jpg" alt="Image of stacked firewood">
       </picture>
     </div>
   </section>

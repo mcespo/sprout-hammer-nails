@@ -8,6 +8,7 @@
   Nate Turner is the mastercraftsman behind it all.</p>
       </article>
       <picture>
+        <p><span>Nate Turner</span>Craftsman</p>
         <source media="(min-width: 960px)" srcset="../assets/craftsman@2x.jpg">
         <img src="../assets/craftsman.jpg" alt="image of Nate Turner">
       </picture>
@@ -71,11 +72,29 @@ export default {
       max-width: 50ch;
     }
     picture {
+      z-index: 1;
       width: 100%;
       justify-self: center;
+      position: relative;
       @media only screen and (min-width: 960px) {
         width: auto;
         justify-self: end;
+      }
+      p {
+        font-weight: 700;
+        text-align: right;
+        text-transform: uppercase;
+        font-size: 14px;
+        position: absolute;
+        right: 20px;
+        bottom: 20px;
+        color: $tussock;
+        span {
+          color: $gray-lighter;
+          font-size: 14px;
+          display: block;
+          margin-bottom: 4px;
+        }
       }
       img {
         width: 100%;
@@ -128,7 +147,9 @@ export default {
         color: $gray;
         max-width: 33ch;
         padding: 10px 0;
+        margin: 0 auto;
         @media only screen and (min-width: 960px) {
+          margin: 0;
           padding: 30px 0;
         }
       }

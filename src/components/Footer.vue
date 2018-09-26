@@ -16,12 +16,11 @@
       </ul>
       <ul>
         <li>Resources</li>
-        <li><a href="#">Bloga</a></li>
+        <li><a href="#">Blog</a></li>
         <li><a href="#">Case Studies</a></li>
       </ul>
-      <div>
-        <p>131 S Dearborn St., Ste 1000<br>
-        Chicago, IL 60603</p>
+      <div class="address">
+        <p>131 S Dearborn St., Ste 1000 Chicago, IL 60603</p>
         <p>1.866.878.3231</p>
         <ul class="icons">
           <li><a href="#"><img src="../assets/icon_footer-twitter.svg" alt=""></a></li>
@@ -81,6 +80,12 @@ export default {
     @media only screen and (min-width: 960px) {
       grid-template-columns: repeat(4, 1fr);
       grid-column: 2/3;
+    }
+    .address {
+      width: 15ch;
+      p:nth-child(2) {
+        padding-top: 8px;
+      }
     }
     .icons {
       margin: 20px 0 0 0;

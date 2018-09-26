@@ -55,32 +55,36 @@ export default {
   .aside-container {
     @extend %container-width;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 40px;
-    padding: 80px 0;
+    @media only screen and (min-width: 960px) {
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 40px;
+      padding: 80px 0;
+    }
     aside {
-      &:first-child {
-        justify-self: start;
-      }
-      &:nth-child(2) {
-        justify-self: center;
-      }
-      &:last-child{
-        justify-self: end;
+      padding: 20px 0;
+      @media only screen and (min-width: 960px) {
+        &:first-child {
+          justify-self: start;
+        }
+        &:nth-child(2) {
+          justify-self: center;
+        }
+        &:last-child{
+          justify-self: end;
+        }
       }
     }
-    padding-top: 60px;
     h3 {
+      @extend %primary-headline;
       color: $tussock;
-      font-weight: 800;
-      font-size: between(20px, 43px, 100px, 959px);
-      @media only screen and (min-width: 960px) {
-        font-size: between(44px, 60px, 960px, 1400px);
-      }
     }
     p {
       @extend %lead-text;
       max-width: 30ch;
+      margin: 0 auto;
+      @media only screen and (min-width: 960px) {
+        margin: 0;
+      }
     }
   }
 }

@@ -33,6 +33,7 @@ export default {
 @import "../scss/_global";
 
 nav {
+  z-index: 2;
   position: fixed;
   width: 100vw;
   height: 72px;
@@ -40,7 +41,6 @@ nav {
 
   ul {
     list-style: none;
-    display: none;
     @media only screen and (min-width: 960px) {
       display: flex;
     }
@@ -60,16 +60,27 @@ nav {
     height: 100%;
     display: grid;
     align-items: center;
-    grid-template-columns: repeat(3, 1fr);
+    justify-content: space-between;
+    grid-template-columns: repeat(2, 1fr);
+    @media only screen and (min-width: 960px) {
+      grid-template-columns: repeat(3, 1fr);
+    }
 
     .nav-logo {
       justify-self: start;
-      width: 220px;
+      max-width: 180px;
       margin-top: -6px;
+      @media only screen and (min-width: 960px) {
+        max-width: 220px;
+      }
     }
 
     .nav-info {
       justify-self: center;
+       display: none;
+      @media only screen and (min-width: 960px) {
+        display: flex;
+      }
       a {
         color: $gray-dark;
         transition: color 300ms ease-in-out;
@@ -81,9 +92,19 @@ nav {
 
     .nav-login {
       justify-self: end;
+      .cta {
+        @media only screen and (max-width: 959px) {
+          padding: 14px;
+          font-size: 14px
+        }
+      }
       li:first-child a {
         color: $gray;
         transition: color 300ms ease-in-out;
+        display: none;
+        @media only screen and (min-width: 960px) {
+          display: flex;
+        }
         &:hover {
           color: saturate($gray, 40%);
         }

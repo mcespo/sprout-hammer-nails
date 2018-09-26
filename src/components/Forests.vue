@@ -128,12 +128,18 @@ export default {
     justify-self: end;
     max-height: 500px;
     width: 100%;
+    max-width: 450px;
     justify-self: center;
     @media only screen and (min-width: 960px) {
-      display: block;
+      width: auto;
+      max-height: 500px;
     }
     img {
-      max-height: 500px;
+      width: 100%;
+      @media only screen and (min-width: 960px) {
+        width: auto;
+        max-height: 500px;
+      }
     }
   }
 }

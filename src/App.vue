@@ -1,8 +1,7 @@
 <template>
   <div id="app">
-    <!-- <img alt="Vue logo" src="./assets/logo.png"> -->
     <Navbar />
-    <Header />
+    <Header id="page-wrap" />
     <Woodworking />
     <Logs />
     <Forests />

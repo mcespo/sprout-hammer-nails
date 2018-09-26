@@ -7,9 +7,13 @@
   and artists. Bespoke quality wood, the finest artisanal touches mark our work from start to finish.
   Nate Turner is the mastercraftsman behind it all.</p>
       </article>
-      <img src="../assets/craftsman.jpg" alt="">
+      <picture>
+        <source media="(min-width: 960px)" srcset="../assets/craftsman@2x.jpg">
+        <img src="../assets/craftsman.jpg" alt="Flowers" style="width:auto;">
+      </picture>
     </div>
-    <div class="aside-container">
+    <div class="aside-bg">
+      <div class="aside-container">
       <aside>
         <h3>Bespoke</h3>
         <h4>The styles represented in this line are quite simply here to stay</h4>
@@ -29,6 +33,7 @@
         <a href="#">Learn More</a>
       </aside>
     </div>
+    </div>
   </section>
 </template>
 
@@ -46,32 +51,91 @@ export default {
   @media only screen and (min-width: 960px) {
     background-image: url("../assets/section1@2x.jpg");
   }
-
   .article-container {
-    width: 90vw;
-    max-width: 1200px;
-    margin: 0 auto;
+    @extend %container-width;
     display: grid;
-    grid-template-columns: 55ch auto;
-    grid-gap: 80px;
-    justify-content: space-around;
-    align-items: center;
+    grid-gap: 20px;
+    grid-template-rows: 300px 1fr;
+    justify-content: center;
+    @media only screen and (min-width: 960px) {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: 1fr;
+    }
     padding: 80px 0;
     h2 {
-      font-size: 43px;
+      @extend %primary-headline;
       line-height: 2.5;
     }
     p {
-      font-size: 21px;
+      @extend %lead-text;
+      max-width: 50ch;
+    }
+    picture {
+      width: 100%;
+      justify-self: center;
+      @media only screen and (min-width: 960px) {
+        width: auto;
+        justify-self: end;
+      }
+      img {
+        width: 100%;
+        height: auto;
+        @media only screen and (min-width: 960px) {
+          max-width: 500px;
+        }
+      }
     }
   }
-  .aside-container {
+  .aside-bg {
     background-color: $gray-darker;
-    display: grid;
-    grid-template-columns: repeat(3, 34ch);
-    grid-gap: 40px;
-    justify-content: center;
-    padding: 80px 0;
+    .aside-container {
+      @extend %container-width;
+      display: grid;
+      grid-gap: 80px;
+      padding: 80px 0;
+      text-align: center;
+      justify-content: center;
+      @media only screen and (min-width: 960px) {
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 40px;
+      }
+      aside {
+        @media only screen and (min-width: 960px) {
+          &:first-child{
+            justify-self: start;
+          }
+          &:nth-child(2) {
+            justify-self: center;
+          }
+          &:last-child{
+            justify-self: end;
+          }
+        }
+      }
+      h3 {
+        color: $tussock;
+        text-transform: uppercase;
+        font-size: 14px;
+        @media only screen and (min-width: 960px) {
+          padding-bottom: 20px;
+        }
+      }
+      h4 {
+        max-width: 33ch;
+      }
+      p {
+        @extend %paragraph-text;
+        color: $gray;
+        max-width: 33ch;
+        padding: 10px 0;
+        @media only screen and (min-width: 960px) {
+          padding: 30px 0;
+        }
+      }
+      a {
+        @extend %learn-more-link;
+      }
+    }
   }
 }
 </style>

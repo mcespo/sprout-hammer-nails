@@ -30,10 +30,14 @@
 
 // variable: colors
 $white: hsl(0, 0%, 100%);
+$gray-lighter: hsl(180, 4%, 95%);
+$gray-light: hsl(180, 5%, 91%);
 $gray: hsl(189, 5%, 70%);
 $gray-dark: hsl(180, 9%, 24%);
 $gray-darker: hsl(180, 18%, 11%);
 $black: hsl(180, 13%, 8%);
+$tussock: hsl(38, 54%, 51%);
+$leather: hsl(35, 29%, 47%);
 $pomegranate: hsl(14, 83%, 51%);
 
 // global
@@ -50,7 +54,7 @@ $pomegranate: hsl(14, 83%, 51%);
 
 body {
   background-color: $black;
-  color: $white;
+  color: $gray-lighter;
 }
 
 .cta {
@@ -59,4 +63,89 @@ body {
   font-weight: 700;
   color: $white;
   background-color: $pomegranate;
+  transition: background-color 300ms ease-in-out;
+  &:hover {
+    background-color: saturate($pomegranate, 40%);
+  }
+}
+
+%container-width {
+  width: 90vw;
+  margin: 0 auto;
+  @media only screen and (min-width: 960px) {
+    max-width: 1440px;
+  }
+}
+
+%content-centering {
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  text-align: center;
+}
+
+%huge-headline {
+  font-weight: 800;
+  font-size: between(11px, 67px, 100px, 959px);
+  @media only screen and (min-width: 960px) {
+    font-size: between(68px, 76px, 960px, 1400px);
+  }
+}
+
+%primary-headline {
+  font-weight: 800;
+  font-size: between(20px, 49px, 100px, 959px);
+  @media only screen and (min-width: 960px) {
+    font-size: between(33px, 55px, 960px, 1399px);
+  }
+  @media only screen and (min-width: 1400px) {
+    font-size: 56px;
+  }
+}
+
+%small-title {
+  font-weight: 700;
+  font-size: between(25px, 35px, 100px, 959px);
+  @media only screen and (min-width: 960px) {
+    font-size: between(32px, 35px, 960px, 1399px);
+  }
+  @media only screen and (min-width: 1400px) {
+    font-size: 36px;
+  }
+}
+
+%lead-text {
+  font-size: between(17px, 19px, 100px, 959px);
+  @media only screen and (min-width: 960px) {
+    font-size: between(18px, 20px, 960px, 1399px);
+  }
+  @media only screen and (min-width: 1400px) {
+    font-size: 21px;
+  }
+}
+
+%paragraph-text {
+  font-size: between(15px, 17px, 100px, 959px);
+  @media only screen and (min-width: 960px) {
+    font-size: between(16px, 17px, 960px, 1399px);
+  }
+  @media only screen and (min-width: 1400px) {
+    font-size: 18px;
+  }
+}
+
+%learn-more-link {
+  color: $tussock;
+  font-weight: 700;
+  text-decoration: none;
+  transition: color 300ms ease-in-out;
+  &:hover {
+    color: saturate($tussock, 40%);
+  }
+  &:after {
+    content: ">";
+    padding-left: 10px;
+    font-size: 14px;
+    font-weight: 800;
+  }
 }

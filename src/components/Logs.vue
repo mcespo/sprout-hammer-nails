@@ -39,20 +39,49 @@ export default {
     background-image: url("../assets/section2@2x.jpg");
   }
   .article-container {
-    display: grid;
-    justify-items: center;
-    align-items: center;
+    @extend %content-centering;
     & > *:not(:last-child) {
-      width: 90vw;
-      max-width: 1200px;
+      @extend %container-width;
+    }
+    h2 {
+      @extend %primary-headline;
+      line-height: 2.5;
+    }
+    p {
+      @extend %lead-text;
+      max-width: 50ch;
     }
   }
   .aside-container {
+    @extend %container-width;
     display: grid;
-    grid-template-columns: repeat(3, 30ch);
+    grid-template-columns: repeat(3, 1fr);
     grid-gap: 40px;
-    justify-content: center;
+    padding: 80px 0;
+    aside {
+      &:first-child {
+        justify-self: start;
+      }
+      &:nth-child(2) {
+        justify-self: center;
+      }
+      &:last-child{
+        justify-self: end;
+      }
+    }
     padding-top: 60px;
+    h3 {
+      color: $tussock;
+      font-weight: 800;
+      font-size: between(20px, 43px, 100px, 959px);
+      @media only screen and (min-width: 960px) {
+        font-size: between(44px, 60px, 960px, 1400px);
+      }
+    }
+    p {
+      @extend %lead-text;
+      max-width: 30ch;
+    }
   }
 }
 </style>

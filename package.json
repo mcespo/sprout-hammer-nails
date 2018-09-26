@@ -9,7 +9,8 @@
     "serve:bs": "vue-cli-service serve:bs"
   },
   "dependencies": {
-    "vue": "^2.5.17"
+    "vue": "^2.5.17",
+    "vue-burger-menu": "^1.0.3"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.0.3",
@@ -18,7 +19,7 @@
     "@vue/eslint-config-prettier": "^3.0.3",
     "node-sass": "^4.9.0",
     "sass-loader": "^7.0.1",
-    "vue-cli-plugin-browser-sync": "^1.0.0-rc2",
+    "vue-cli-plugin-browser-sync": "^1.0.0-rc3",
     "vue-template-compiler": "^2.5.17"
   },
   "eslintConfig": {
